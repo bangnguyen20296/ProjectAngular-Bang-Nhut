@@ -10,8 +10,14 @@
 	border-bottom:1px solid #4c4c4c;
 }
 .menu ul li a{
-	padding:8px 10px;
-	  display: block;
+	padding:13px 20px;
+	display: block;
+	color: rgba(255, 255, 255, 0.5);
+}
+.menu ul li a .cover i {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
 }
 .menu ul li a.active {
 	background:#dfb636;
@@ -19,131 +25,28 @@
 .menu ul li a:hover {
 	background: #dfb636;
 }
-i.home {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat 0px 0px;
+.bg-none{
+	background-color: none;
+}
+i.home1, i.news1, i.booking1, i.contact1, i.login1 {
 	display:block;
 }
-i.home1 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat 0px -60px;
-	display:block;
+i.home2, i.news2, i.booking2, i.contact2, i.login2 {
+	display: none;
 }
-i.home2 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat 0px 0px;
+.menu ul li a:hover div.cover i.home1, .menu ul li a:hover div.cover i.news1, .menu ul li a:hover div.cover i.booking1, .menu ul li a:hover div.cover i.contact1, .menu ul li a:hover div.cover i.login1{
 	display:none;
 }
-.menu ul li a:hover div.hm i.home1{
+.menu ul li a:hover div.cover i.home2, .menu ul li a:hover div.cover i.news2, .menu ul li a:hover div.cover i.booking2, .menu ul li a:hover div.cover i.contact2, .menu ul li a:hover div.cover i.login2{
+	display:block;
+	color: white;
+}
+.menu ul li a.active div.cover i.home1, .menu ul li a.active div.cover i.news1, .menu ul li a.active div.cover i.booking1, .menu ul li a.active div.cover i.contact1, .menu ul li a.active div.cover i.login1{
 	display:none;
 }
-.menu ul li a:hover div.hm i.home2{
+.menu ul li a.active div.cover i.home2, .menu ul li a.active div.cover i.news2, .menu ul li a.active div.cover i.booking2, .menu ul li a.active div.cover i.contact2, .menu ul li a.active div.cover i.login2{
 	display:block;
-}
-.menu ul li a.active div.hm i.home1{
-	display:none;
-}
-.menu ul li a.active div.hm i.home2{
-	display:block;
-}
-i.videos {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -60px 0px;
-	display:block;
-}
-i.videos1 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -60px -60px;
-	display:none;
-}
-.menu ul li a:hover div.video i.videos{
-	display:none;
-}
-.menu ul li a:hover div.video i.videos1{
-	display:block;
-}
-.menu ul li a.active div.video i.videos{
-	display:none;
-}
-.menu ul li a.active div.video i.videos1{
-	display:block;
-}
-i.watching {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -120px 0px;
-	display:block;
-}
-i.watching1 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -120px -60px;
-	display:none;
-}
-.menu ul li a:hover div.cat i.watching{
-	display:none;
-}
-.menu ul li a:hover div.cat i.watching1{
-	display:block;
-}
-.menu ul li a.active div.cat i.watching{
-	display:none;
-}
-.menu ul li a.active div.cat i.watching1{
-	display:block;
-}
-i.booking {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -180px 0px;
-	display:block;
-}
-i.booking1 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -180px -60px;
-	display:none;
-}
-.menu ul li a:hover div.bk i.booking{
-	display:none;
-}
-.menu ul li a:hover div.bk i.booking1{
-	display:block;
-}
-.menu ul li a.active div.bk i.booking{
-	display:none;
-}
-.menu ul li a.active div.bk i.booking1{
-	display:block;
-}
-i.contact {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -240px 0px;
-	display:block;
-}
-i.contact1 {
-	width:60px;
-	height:60px;
-	background: url('../../../assets/images/img-sprite.png') no-repeat -240px -60px;
-	display:none;
-}
-.menu ul li a:hover div.cnt i.contact{
-	display:none;
-}
-.menu ul li a:hover div.cnt i.contact1{
-	display:block;
-}
-.menu ul li a.active div.cnt i.contact{
-	display:none;
-}
-.menu ul li a.active div.cnt i.contact1{
-	display:block;
+	color: white;
 }
 .navbar {
     padding-top: 0px;

@@ -7,21 +7,38 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse menu" id="collapsibleNavbar">
+    <!-- <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" title="Home" routerLink="/home/trang-chu"><div class="cover"><i class="fas fa-home fa-2x home1"></i><i class="fas fa-home fa-2x home2"></i></div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" title="News" routerLink="/home/tin-tuc"><div class="cover"><i class="fa fa-newspaper fa-2x news1"></i><i class="fa fa-newspaper fa-2x news2"></i></div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" title="Booking" routerLink="/home/trang-dat-ve"><div class="cover"><i class="fas fa-ticket-alt fa-2x booking1"></i><i class="fas fa-ticket-alt fa-2x booking2"></i></div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" title="Contact" routerLink="/home/lien-he"><div class="cover"><i class="fas fa-envelope fa-2x contact1"></i><i class="fas fa-envelope fa-2x contact2"></i></div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" title="Login" routerLink="/home/dang-nhap"><div class="cover"><i class="fas fa-sign-in-alt fa-2x login1"></i><i class="fas fa-sign-in-alt fa-2x login2"></i></div></a>
+      </li>
+    </ul> -->
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link active" href="index.html"><i class="home"></i></a>
+        <a class="nav-link" [ngClass]="{'bg-none': !status1, 'active': status1}" (click)="changeActive(1)" title="Home" routerLink="/home/trang-chu"><div class="cover"><i class="fas fa-home fa-2x home1"></i><i class="fas fa-home fa-2x home2"></i></div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a>
+        <a class="nav-link" [ngClass]="{'bg-none': !status2, 'active': status2}" (click)="changeActive(2)" title="News" routerLink="/home/tin-tuc"><div class="cover"><i class="fa fa-newspaper fa-2x news1"></i><i class="fa fa-newspaper fa-2x news2"></i></div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a>
+        <a class="nav-link" [ngClass]="{'bg-none': !status3, 'active': status3}" (click)="changeActive(3)" title="Booking" routerLink="/home/trang-dat-ve"><div class="cover"><i class="fas fa-ticket-alt fa-2x booking1"></i><i class="fas fa-ticket-alt fa-2x booking2"></i></div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="404.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a>
+        <a class="nav-link" [ngClass]="{'bg-none': !status4, 'active': status4}" (click)="changeActive(4)" title="Contact" routerLink="/home/lien-he"><div class="cover"><i class="fas fa-envelope fa-2x contact1"></i><i class="fas fa-envelope fa-2x contact2"></i></div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a>
+        <a class="nav-link" [ngClass]="{'bg-none': !status5, 'active': status5}" (click)="changeActive(5)" title="Login" routerLink="/home/dang-nhap"><div class="cover"><i class="fas fa-sign-in-alt fa-2x login1"></i><i class="fas fa-sign-in-alt fa-2x login2"></i></div></a>
       </li>
     </ul>
   </div> 

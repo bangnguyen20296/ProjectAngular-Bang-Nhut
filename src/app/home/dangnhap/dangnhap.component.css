@@ -1,0 +1,9 @@
+.full {	
+	border-left: 5px solid #2b2b2b;
+}
+.main{
+    border-left: 75px solid #383838;
+}
+.dn {
+    min-height: 700px;
+}
