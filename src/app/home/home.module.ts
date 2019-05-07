@@ -16,12 +16,12 @@ import { FooterComponent } from '../share/footer/footer.component';
 import { MenuComponent } from '../share/menu/menu.component';
 import { ThongtinComponent } from './trangchitiet/thongtin/thongtin.component';
 import { DanhgiaComponent } from './trangchitiet/danhgia/danhgia.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { SlickModule } from 'ngx-slick';
 
 @NgModule({
   imports: [
-    CommonModule, HomeRoutingModule, SlickModule
+    CommonModule, HomeRoutingModule, CarouselModule, NgxPaginationModule
   ],
   declarations: [
     TrangchuComponent,
@@ -49,7 +49,8 @@ import { SlickModule } from 'ngx-slick';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    SlickModule
+    CarouselModule,
+    NgxPaginationModule
   ]
 })
 export class HomeModule { }

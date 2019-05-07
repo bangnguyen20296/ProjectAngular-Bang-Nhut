@@ -1,0 +1,20 @@
+.phim {
+    padding: 2em;
+    border-top: 1px solid #000;
+}
+.phim-heading-left {
+    padding: 11px 0;
+}
+.phim-heading-left .head {
+    font-size: 2em;
+    font-weight: 700;
+}
+.phim-heading {
+    border-bottom: 1px solid #F1F0F6;
+    margin: 0 0 3em 0;
+}
+.phim-heading-left h3 {
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+}

@@ -1,0 +1,29 @@
+.footer {
+    background: #f3f3f3;
+    padding: 4em 0;
+    margin-left: 2px;
+}
+.footer .row {
+    margin: 0;
+}
+.footer h5 {
+    color: #6F6F6F;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+.footer h5::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 0px;
+    width: 37px;
+    height: 3px;
+    top: 30px;
+    background: #dfb636;
+}
+.footer p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #b0b0b0;
+}

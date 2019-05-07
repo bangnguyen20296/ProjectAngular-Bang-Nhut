@@ -10,6 +10,6 @@ export class ItemPhimComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+ 
   }
-
 }
