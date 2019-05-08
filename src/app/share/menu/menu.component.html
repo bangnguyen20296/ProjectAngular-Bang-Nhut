@@ -7,23 +7,6 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse menu" id="collapsibleNavbar">
-    <!-- <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" title="Home" routerLink="/home/trang-chu"><div class="cover"><i class="fas fa-home fa-2x home1"></i><i class="fas fa-home fa-2x home2"></i></div></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" title="News" routerLink="/home/tin-tuc"><div class="cover"><i class="fa fa-newspaper fa-2x news1"></i><i class="fa fa-newspaper fa-2x news2"></i></div></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" title="Booking" routerLink="/home/trang-dat-ve"><div class="cover"><i class="fas fa-ticket-alt fa-2x booking1"></i><i class="fas fa-ticket-alt fa-2x booking2"></i></div></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" title="Contact" routerLink="/home/lien-he"><div class="cover"><i class="fas fa-envelope fa-2x contact1"></i><i class="fas fa-envelope fa-2x contact2"></i></div></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" title="Login" routerLink="/home/dang-nhap"><div class="cover"><i class="fas fa-sign-in-alt fa-2x login1"></i><i class="fas fa-sign-in-alt fa-2x login2"></i></div></a>
-      </li>
-    </ul> -->
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" [ngClass]="{'bg-none': !status1, 'active': status1}" (click)="changeActive(1)" title="Home" routerLink="/home/trang-chu"><div class="cover"><i class="fas fa-home fa-2x home1"></i><i class="fas fa-home fa-2x home2"></i></div></a>

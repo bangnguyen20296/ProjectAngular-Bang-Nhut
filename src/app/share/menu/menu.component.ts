@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  status1 = true;
-  status2 = false;
-  status3 = false;
-  status4 = false;
-  status5 = false;
+  status1: boolean;
+  status2: boolean;
+  status3: boolean;
+  status4: boolean;
+  status5: boolean;
   constructor() {
   }
 
   ngOnInit() {
-
+    console.log(this.status1);
   }
   changeActive(stt: number) {
     if (stt === 1) {
