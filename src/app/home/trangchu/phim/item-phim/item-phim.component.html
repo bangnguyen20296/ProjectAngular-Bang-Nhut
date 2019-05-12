@@ -1,77 +1,10 @@
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <a data-toggle="modal" data-frame="iframe" data-target="#modelId"><img class="card-img-top" src="../../../../assets/images/poster1.jpg"
-        alt="Card image" class="img-fluid"></a>
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
+<div class="card" style="width: 230px;">
+  <a data-toggle="modal" data-frame="iframe" data-target="#modelId"><img class="card-img-top" [src]="phim.HinhAnh"
+      alt="Card image" class="img-fluid"></a>
+  <div class="card-body">
+    <h4 class="card-title">{{phim.TenPhim}}</h4>
   </div>
 </div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster2.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster3.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster4.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <a data-toggle="modal" data-target="#modelId"><img class="card-img-top" src="../../../../assets/images/poster1.jpg"
-        alt="Card image" class="img-fluid"></a>
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster2.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster3.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-3 mb-4">
-  <div class="card" style="width: 230px">
-    <img class="card-img-top" src="../../../../assets/images/poster4.jpg" alt="Card image" class="img-fluid">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-    </div>
-  </div>
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -82,9 +15,29 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe width="700" height="400" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
+        <iframe width="560" height="315" src={{phim.Trailer}} frameborder="0"
           allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img [src]="phim.HinhAnh" alt="">
       </div>
     </div>
   </div>
 </div>
+
+<!-- <div class="card" style="width: 230px;">
+  <a (click)="ngxSmartModalService.getModal('{{in}}').open()" (change)="ngxSmartModalService.getModalData('{{in}}').getModalData('phim').open()"><img class="card-img-top" [src]="phim.HinhAnh"
+      alt="Card image" class="img-fluid"></a>
+  <div class="card-body">
+    <h4 class="card-title">{{phim.TenPhim}}</h4>
+  </div>
+</div> -->
+
+<!-- <ngx-smart-modal #myModal identifier="myModal">
+  <h1>{{phim.TenPhim}}</h1>
+  <img class="img-responsive" [src]="phim.Trailer" alt="">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper neque ac ullamcorper scelerisque.
+    Proin molestie erat sapien, ac dapibus tortor placerat a. Vivamus quis tempor mauris. Ut porta ultricies nisi in
+    eleifend. In magna nisi, tempor pharetra consequat in, sagittis id augue. Aliquam eu lectus id mi vulputate
+    convallis. Nam facilisis nisl quis urna gravida tempus.</p>
+
+  <button (click)="myModal.close()" class="btn btn-danger">Close</button>
+</ngx-smart-modal> -->

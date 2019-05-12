@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.status1);
   }
   changeActive(stt: number) {
     if (stt === 1) {

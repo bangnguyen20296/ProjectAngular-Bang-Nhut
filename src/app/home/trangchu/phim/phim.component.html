@@ -5,6 +5,34 @@
     </div>
   </div>
   <div class="phim-content">
-    <app-item-phim class="row"></app-item-phim>
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let item of dsPhim; let i = index">
+        <app-item-phim [phim]="item" [in]="i"></app-item-phim>
+        <!-- <div class="card" style="width: 230px;">
+          <a (click)="ngxSmartModalService.getModal('myModal').open()"><img class="card-img-top" [src]="phim.HinhAnh"
+              alt="Card image" class="img-fluid"></a>
+          <div class="card-body">
+            <h4 class="card-title">{{phim.TenPhim}}</h4>
+          </div>
+        </div> -->
+
+        <!-- <ngx-smart-modal #myModal identifier="myModal">
+          <h1>{{phim.TenPhim}}</h1>
+          <img class="img-responsive" [src]="phim.Trailer" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper neque ac ullamcorper
+            scelerisque.
+            Proin molestie erat sapien, ac dapibus tortor placerat a. Vivamus quis tempor mauris. Ut porta ultricies
+            nisi in
+            eleifend. In magna nisi, tempor pharetra consequat in, sagittis id augue. Aliquam eu lectus id mi vulputate
+            convallis. Nam facilisis nisl quis urna gravida tempus.</p>
+
+          <button (click)="myModal.close()" class="btn btn-danger">Close</button>
+        </ngx-smart-modal> -->
+      </div>
+
+
+
+
+    </div>
   </div>
 </div>

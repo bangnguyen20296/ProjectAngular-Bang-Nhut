@@ -16,12 +16,18 @@ import { FooterComponent } from '../share/footer/footer.component';
 import { MenuComponent } from '../share/menu/menu.component';
 import { ThongtinComponent } from './trangchitiet/thongtin/thongtin.component';
 import { DanhgiaComponent } from './trangchitiet/danhgia/danhgia.component';
+import { QuangcaoComponent } from './trangchu/quangcao/quangcao.component';
+
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   imports: [
-    CommonModule, HomeRoutingModule, CarouselModule, NgxPaginationModule
+    CommonModule, HomeRoutingModule,
+    CarouselModule, NgxPaginationModule,
+    NgxSmartModalModule.forChild(), AngularFontAwesomeModule
   ],
   declarations: [
     TrangchuComponent,
@@ -39,18 +45,28 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FooterComponent,
     MenuComponent,
     ThongtinComponent,
-    DanhgiaComponent
+    DanhgiaComponent,
+    QuangcaoComponent
   ],
 
   exports: [
     TrangchuComponent,
     TrangchitietComponent,
+    TrangdatveComponent,
     PhimComponent,
+    SliderComponent,
+    ItemPhimComponent,
+    TintucComponent,
+    HomeComponent,
+    DangnhapComponent,
+    TrangdatveComponent,
+    LienheComponent,
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    CarouselModule,
-    NgxPaginationModule
+    ThongtinComponent,
+    DanhgiaComponent,
+    QuangcaoComponent
   ]
 })
 export class HomeModule { }

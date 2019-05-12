@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PhimComponent } from '../phim.component';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 @Component({
   selector: 'app-item-phim',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-phim.component.css']
 })
 export class ItemPhimComponent implements OnInit {
-
-  constructor() { }
+  @Input() phim: PhimComponent;
+  @Input() in: PhimComponent;
+  constructor(public ngxSmartModalService: NgxSmartModalService) { }
 
   ngOnInit() {
- 
+
   }
 }
