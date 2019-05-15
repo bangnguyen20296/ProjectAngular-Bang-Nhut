@@ -20,14 +20,14 @@ import { QuangcaoComponent } from './trangchu/quangcao/quangcao.component';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PipeModule } from '../pipe/pipe.module';
 
 @NgModule({
   imports: [
     CommonModule, HomeRoutingModule,
     CarouselModule, NgxPaginationModule,
-    NgxSmartModalModule.forChild(), AngularFontAwesomeModule
+    AngularFontAwesomeModule, PipeModule
   ],
   declarations: [
     TrangchuComponent,

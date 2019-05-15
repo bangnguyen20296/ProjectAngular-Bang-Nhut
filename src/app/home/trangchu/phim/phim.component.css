@@ -18,3 +18,11 @@
     text-transform: uppercase;
     display: block;
 }
+.modal-body {
+    padding: 2px;
+    height: 454px;
+}
+.modal-dialog {
+    margin: 3.5rem auto;
+    max-width: 856px;
+}
