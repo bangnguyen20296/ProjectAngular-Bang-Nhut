@@ -22,12 +22,14 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { PipeModule } from '../pipe/pipe.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule, HomeRoutingModule,
     CarouselModule, NgxPaginationModule,
-    AngularFontAwesomeModule, PipeModule
+    AngularFontAwesomeModule, PipeModule,
+    FormsModule, ReactiveFormsModule
   ],
   declarations: [
     TrangchuComponent,

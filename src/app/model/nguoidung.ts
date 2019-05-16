@@ -1,4 +1,3 @@
-
 export interface NguoiDung {
     TaiKhoan: string;
     MatKhau: string;
@@ -7,4 +6,4 @@ export interface NguoiDung {
     MaNhom: string;
     MaLoaiNguoiDung: string;
     HoTen: string;
-    }
+}

@@ -23,19 +23,63 @@
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-lg-12">
-                        <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form"
-                          style="display: block;">
+                        <form [formGroup]="formSignIn" id="login-form" autocomplete="off" role="form"
+                          style="display: block;" (ngSubmit)="handleSignIn()">
                           <div class="form-group">
-                            <input type="text" name="username" id="username" tabindex="1" class="form-control"
-                              placeholder="Username" value="">
+                            <input type="text" name="TaiKhoan" id="username" tabindex="1" class="form-control"
+                              placeholder="Username" value="" formControlName="TaiKhoan">
+                            <small
+                              *ngIf="formSignIn.get('TaiKhoan').invalid && (formSignIn.get('TaiKhoan').touched || formSignIn.get('TaiKhoan').dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('TaiKhoan').errors['required']">
+                                Please enter your Username
+                              </small>
+                              <!-- check pattern -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('TaiKhoan').errors['pattern']">
+                                Username can contain only letters, numbers, -, _, and 8-16 characters
+                              </small>
+                              <!-- check length -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('TaiKhoan').errors['maxlength']">
+                                Username cannot be more than 16 characters
+                              </small>
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('TaiKhoan').touched && formSignIn.get('TaiKhoan').errors['minlength']">
+                                Username cannot be less than 8 characters
+                              </small>
+                              <!-- check invalid user -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('TaiKhoan').errors['KhongHopLe']">
+                                Invalid Username
+                              </small>
+                            </small>
                           </div>
                           <div class="form-group">
-                            <input type="password" name="password" id="password" tabindex="2" class="form-control"
-                              placeholder="Password">
+                            <input type="password" name="MatKhau" id="password" tabindex="2" class="form-control"
+                              placeholder="Password" formControlName="MatKhau">
+                            <small
+                              *ngIf="formSignIn.get('MatKhau').invalid && (formSignIn.get('MatKhau').touched || formSignIn.get('MatKhau').dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('MatKhau').errors['required']">
+                                Please enter your Password
+                              </small>
+                              <!-- check length -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('MatKhau').errors['maxlength']">
+                                Password cannot be more 12 characters
+                              </small>
+                              <small class="alert alert-danger text-left"
+                                *ngIf="formSignIn.get('MatKhau').touched && formSignIn.get('MatKhau').errors['minlength']">
+                                Password cannot be less 6 characters
+                              </small>
+                            </small>
                           </div>
                           <div class="form-group text-center">
                             <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                            <label for="remember"> Remember Me</label>
+                            <label for="remember">Remember Me</label>
                           </div>
                           <div class="form-group">
                             <div class="row">
@@ -65,28 +109,119 @@
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-lg-12">
-                        <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form">
-                          <div class="form-group">
-                            <input type="text" name="username" id="username" tabindex="1" class="form-control"
-                              placeholder="Username" value="">
+                        <form id="register-form" role="form" autocomplete="off" #RegisterForm="ngForm"
+                          (ngSubmit)="handleSignUp(RegisterForm.value)">
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-id-card fa-2x"></i></div>
+                            <input type="text" [pattern]='"^[a-zA-Z_ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+                            "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+                            "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$"' required #hoten='ngModel' name="HoTen" id="name" tabindex="1"
+                              class="form-control" placeholder="Full Name" ngModel>
+                            <small *ngIf="hoten.errors && (hoten.touched || hoten.dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left" *ngIf="hoten.errors.required">
+                                Please enter your full name
+                              </small>
+                              <!-- check pattern -->
+                              <small class="alert alert-danger text-left" *ngIf="hoten.errors.pattern">
+                                Please enter your full name as text
+                              </small>
+                            </small>
                           </div>
-                          <div class="form-group">
-                            <input type="email" name="email" id="email" tabindex="1" class="form-control"
-                              placeholder="Email Address" value="">
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-envelope fa-2x"></i></div>
+                            <input type="email" [pattern]='"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                            + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"' required #email='ngModel'
+                              name="Email" id="email" tabindex="2" class="form-control" placeholder="Email Address"
+                              ngModel>
+                            <small *ngIf="email.errors && email.touched">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left" *ngIf="email.errors.required">
+                                Please enter your Email
+                              </small>
+                              <!-- check pattern -->
+                              <small class="alert alert-danger text-left" *ngIf="email.errors.pattern">
+                                This is not Email
+                              </small>
+                            </small>
                           </div>
-                          <div class="form-group">
-                            <input type="password" name="password" id="password" tabindex="2" class="form-control"
-                              placeholder="Password">
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-phone fa-2x pl-1"></i></div>
+                            <input type="text" [pattern]='"^[0-9]+$"' required #phone='ngModel' name="SoDT" id="phone" tabindex="3" class="form-control"
+                              placeholder="Phone Number" ngModel>
+                            <small *ngIf="phone.errors && (phone.touched || phone.dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left" *ngIf="phone.errors.required">
+                                Please enter your Phone Number
+                              </small>
+                              <!-- check pattern -->
+                              <small class="alert alert-danger text-left" *ngIf="phone.errors.pattern">
+                                Please input Number only
+                              </small>
+                            </small>
                           </div>
-                          <div class="form-group">
-                            <input type="password" name="confirm-password" id="confirm-password" tabindex="2"
-                              class="form-control" placeholder="Confirm Password">
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-user fa-2x pl-1"></i></div>
+                            <input type="text" [pattern]='"^[a-z0-9_-]+$"' required #taikhoan='ngModel' name="TaiKhoan" minlength="8" maxlength="16" id="username" tabindex="4" class="form-control" placeholder="Username" ngModel>
+                            <small *ngIf="taikhoan.errors && (taikhoan.touched || taikhoan.dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left" *ngIf="taikhoan.errors.required">
+                                Please enter a Username
+                              </small>
+                              <!-- check length -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="taikhoan.touched && taikhoan.errors.minlength">
+                                Username is only 8 to 16 characters
+                              </small>
+                              <!-- check pattern -->
+                              <small class="alert alert-danger text-left" *ngIf="taikhoan.errors.pattern">
+                                Username can contain only letters, numbers, -, _, and 8-16 characters
+                              </small>
+                            </small>
                           </div>
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-key fa-2x pl-1"></i></div>
+                            <input type="password" required #matkhau='ngModel' name="MatKhau" minlength="6"
+                              maxlength="12" id="password" tabindex="5" class="form-control" placeholder="Password"
+                              ngModel>
+                            <small *ngIf="matkhau.errors && (matkhau.touched || matkhau.dirty)">
+                              <!-- check empty -->
+                              <small class="alert alert-danger text-left" *ngIf="matkhau.errors.required">
+                                Please enter a Password
+                              </small>
+                              <!-- check length -->
+                              <small class="alert alert-danger text-left"
+                                *ngIf="matkhau.touched && matkhau.errors.minlength">
+                                Password is only 6 to 12 characters
+                              </small>
+                            </small>
+                          </div>
+
+                          <div class="form-inline">
+                            <div class="icon"><i class="fa fa-lock fa-2x pl-2"></i></div>
+                            <input type="password" required #repass='ngModel'
+                              [ngClass]="{'ng-invalid':(matkhau.value!=repass.value), 'ng-valid':!(matkhau.value!=repass.value)}"
+                              name="confirm-password" id="confirm-password" tabindex="6" class="form-control"
+                              placeholder="Confirm Password" ngModel>
+                            <small *ngIf="repass.errors || (matkhau.value != repass.value)">
+                              <!-- check duplicate password -->
+                              <small class="alert alert-danger text-left" *ngIf="(repass.dirty || repass.touched) && ((matkhau.value != repass.value) || repass.errors.required)">
+                                Please enter the same Password as above
+                              </small>
+                            </small>
+                          </div>
+
                           <div class="form-group">
                             <div class="row">
                               <div class="col-sm-5 col-sm-offset-3 register-div">
-                                <input type="submit" name="register-submit" id="register-submit" tabindex="4"
-                                  class="form-control btn btn-register" value="Register Now">
+                                <input type="submit" name="register-submit" id="register-submit" tabindex="7"
+                                  class="form-control btn btn-register" value="Register Now"
+                                  [disabled]="(hoten.errors && (hoten.touched || hoten.dirty)) || (email.errors && email.touched) || (phone.errors && (phone.touched || phone.dirty)) || (taikhoan.errors && (taikhoan.touched || taikhoan.dirty)) || (matkhau.errors && (matkhau.touched || matkhau.dirty)) || (repass.errors || (matkhau.value != repass.value))">
                               </div>
                             </div>
                           </div>
