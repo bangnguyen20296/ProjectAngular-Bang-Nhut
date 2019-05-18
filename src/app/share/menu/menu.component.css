@@ -1,0 +1,54 @@
+/* Menu */
+.menu {
+	position: fixed;
+	top: 82px;
+	left: 5px;
+	z-index: 2;
+}
+.menu ul li {
+	list-style-type:none;
+	border-bottom:1px solid #4c4c4c;
+}
+.menu ul li a{
+	padding: 13px 19px 13px 20px;
+	display: block;
+	color: rgba(255, 255, 255, 0.5);
+}
+.menu ul li a .cover i {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.menu ul li a.active {
+	background:#dfb636;
+}
+.menu ul li a:hover {
+	background: #dfb636;
+}
+.bg-none{
+	background-color: none;
+}
+i.home1, i.news1, i.booking1, i.contact1, i.login1 {
+	display:block;
+}
+i.home2, i.news2, i.booking2, i.contact2, i.login2 {
+	display: none;
+}
+.menu ul li a:hover div.cover i.home1, .menu ul li a:hover div.cover i.news1, .menu ul li a:hover div.cover i.booking1, .menu ul li a:hover div.cover i.contact1, .menu ul li a:hover div.cover i.login1{
+	display:none;
+}
+.menu ul li a:hover div.cover i.home2, .menu ul li a:hover div.cover i.news2, .menu ul li a:hover div.cover i.booking2, .menu ul li a:hover div.cover i.contact2, .menu ul li a:hover div.cover i.login2{
+	display:block;
+	color: white;
+}
+.menu ul li a.active div.cover i.home1, .menu ul li a.active div.cover i.news1, .menu ul li a.active div.cover i.booking1, .menu ul li a.active div.cover i.contact1, .menu ul li a.active div.cover i.login1{
+	display:none;
+}
+.menu ul li a.active div.cover i.home2, .menu ul li a.active div.cover i.news2, .menu ul li a.active div.cover i.booking2, .menu ul li a.active div.cover i.contact2, .menu ul li a.active div.cover i.login2{
+	display:block;
+	color: white;
+}
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

@@ -1,0 +1,131 @@
+<div class="container">
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" style="margin-left:-110px;overflow-y: hidden !important;" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="width:800px">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">THÊM PHIM</h4>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-12 mx-auto">
+              <form #formAddMovie="ngForm" (ngSubmit)="handleAddMovie(formAddMovie.value,hinhAnh.files )">
+                <h4 style="background-color:darkcyan;font-weight: bold;color:yellow" class="display-4 text-center">Thêm Phim </h4>
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">Tên Phim: </label>
+                        <input type="text" name="TenPhim" ngModel class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">Trailer: </label>
+                        <input type="text" name="Trailer" ngModel class="form-control">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">Hình Ảnh: </label>
+                        <input type="file" #hinhAnh>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="">Mô Tả: </label>
+                        <input type="text" name="MoTa" ngModel class="form-control">
+                      </div>
+                    </div>
+                </div>
+                
+               <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Mã Nhóm: </label>
+                      <input type="text" name="MaNhom" ngModel class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Ngày Khởi Chiếu: </label>
+                      <input type="text" name="NgayKhoiChieu" ngModel class="form-control">
+                    </div>
+                  </div>
+               </div>
+              
+                
+               
+                <div class="form-group">
+                  <label for="">Đánh Giá: </label>
+                  <input type="text" class="form-control" name="DanhGia" ngModel>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success" type="submit">THÊM</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr id="row1">
+          <th>Hình Anh</th>
+          <th>Mã phim</th>
+          <th>Tên phim</th>
+          <th>Trailer</th>
+          <th>Mô tả</th>
+          <th>Mã nhóm</th>
+          <th>Ngày khởi chiếu</th>
+          <th>Đánh giá</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dsp of mangPhim">
+          <td>
+            <img style="width:50px;height:50px" src={{dsp.HinhAnh}} alt="">
+          </td>
+          <td>{{dsp.MaPhim}}</td>
+          <td id="tenphim">{{dsp.TenPhim | uppercase}}</td>
+          <td id="trailer">{{dsp.Trailer | uppercase }}</td>
+          <td>{{dsp.MoTa}}</td>
+          <td>{{dsp.MaNhom}}</td>
+          <td>{{dsp.NgayKhoiChieu}}</td>
+          <td>{{dsp.DanhGia}}</td>
+          <td>
+            <button class="btn btn-danger">Sửa</button>
+            <button (click)="XoaSanPham(item.dsp.MaPhim)" class="btn btn-primary">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btnThem" data-toggle="modal" data-target="#myModal" >THÊM PHIM</button>
+</div>

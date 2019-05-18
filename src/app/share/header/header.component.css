@@ -1,0 +1,57 @@
+/* Header */
+.header {
+	padding: 1.2em 3em 0.7em 2em;
+	background: rgba(255, 255, 255, 0.47);
+}
+.logo{
+	float: left;
+	width: 45%;
+}
+.logo a {
+	display: block;
+	float: left;
+}
+.logo p {
+	color:#D0D0D0;
+	font-size:1em;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	float: left;
+	border-left: 1px solid #D0D0D0;
+	padding:4px 0 4px 20px;
+	margin:8px 0 0px 20px;
+}
+
+.search{
+	float:right;
+}
+.search {
+	position: relative;
+	padding: 5px 12px;
+	width: 20%;
+	float: right;
+	border: 1px solid #f0f0f0;
+}
+.search input[type="text"] {
+	outline: none;
+	color: #b3b3b3;
+	background: none;
+	font-size: 16px;
+	border: none;
+	width: 84.33%;
+}
+.search input[type="submit"] {
+	background: url('../../../assets/images/sprit-1.png') no-repeat 0px 0px;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	outline: none;
+	top: 2px;
+	right: 7px;
+	width: 35px;
+	height: 35px;
+}
+
+
+
+

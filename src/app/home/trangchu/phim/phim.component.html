@@ -1,0 +1,32 @@
+<div class="container phim">
+  <div class="phim-heading">
+    <div class="phim-heading-left">
+      <h3 class="head">Latest Films</h3>
+    </div>
+  </div>
+  <div class="phim-content">
+    <div class="row">
+      <div class="col-md-3 mb-4" *ngFor="let phim of dsPhim; let i = index">
+        <app-item-phim [phim]="phim" (click)="changeModal(phim.Trailer)"></app-item-phim>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <iframe width="850" height="450" [src]="urlTrailer" frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

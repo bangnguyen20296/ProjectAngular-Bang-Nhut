@@ -1,0 +1,31 @@
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tài khoản</th>
+        <th>Họ Tên</th>
+        <th>Mã nhóm</th>
+        <th>Email</th>
+        <th>Số điện thoại</th>
+        <th>Loại người dùng</th>
+        <th>Thao tác</th>
+        
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let dsnd of mangNguoiDung">
+        <td>{{dsnd.TaiKhoan}}</td>
+        <td id="hoten">{{dsnd.HoTen}}</td>
+        <td>{{dsnd.MaNhom}}</td>
+        <td>{{dsnd.Email}}</td>
+        <td>{{dsnd.SoDT}}</td>
+        <td>{{dsnd.MaLoaiNguoiDung}}</td>
+        <td>
+            <button class="btn btn-danger">Sửa</button>
+            <button class="btn btn-primary">Xóa</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  
