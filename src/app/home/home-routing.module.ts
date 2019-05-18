@@ -19,10 +19,11 @@ const routes: Routes = [
           {path: 'lien-he', component: LienheComponent},
           {path: 'dang-nhap', component: DangnhapComponent}
     ]}
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }
+ 

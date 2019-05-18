@@ -10,7 +10,7 @@ import { HomeComponent } from './home.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
 import { TrangdatveComponent } from './trangdatve/trangdatve.component';
 import { LienheComponent } from './lienhe/lienhe.component';
-import { HomeRoutingModule } from './home-routing.mudule';
+import { HomeRoutingModule } from './home-routing.module';
 import { HeaderComponent } from '../share/header/header.component';
 import { FooterComponent } from '../share/footer/footer.component';
 import { MenuComponent } from '../share/menu/menu.component';
