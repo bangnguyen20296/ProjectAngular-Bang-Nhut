@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+<<<<<<< HEAD
 import { Http , Headers} from '@angular/http';
+=======
+>>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
 
 @Injectable({
   providedIn: 'root'
 })
 export class LayDanhSachPhimService {
 
+<<<<<<< HEAD
   constructor(private http: HttpClient, private _htpp: Http) { }
+=======
+  constructor(private http: HttpClient) { }
+>>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
   public LayDanhSachPhim(): Observable<any> {
     const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP02`);
     return obServe;
   }
+<<<<<<< HEAD
   
   public uploadFile(file: File, TenPhim: string) {
     const formData = new FormData();
@@ -32,4 +40,6 @@ export class LayDanhSachPhimService {
     });
   }
   
+=======
+>>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
 }

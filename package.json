@@ -16,7 +16,10 @@
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
+<<<<<<< HEAD
     "@angular/http": "^7.2.15",
+=======
+>>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
