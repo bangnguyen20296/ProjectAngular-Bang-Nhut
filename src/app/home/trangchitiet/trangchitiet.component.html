@@ -29,12 +29,27 @@
                 <p class="info">{{ChiTietPhim.MoTa}}</p>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-3">
+                <p class="info">Time: </p>
+              </div>
+              <div class="col-md-9">
+                <div class="row pl-3">
+                  <div *ngFor="let lichchieu of ChiTietPhim.LichChieu">
+                    <button class="btn btn-dark mb-2 mr-2" routerLink="/dat-ve">
+                      {{lichchieu.NgayChieuGioChieu | date:'d/M hh:mm'}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="modelChiTiet" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal fade" id="modelChiTiet" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
