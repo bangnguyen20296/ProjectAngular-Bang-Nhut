@@ -8,6 +8,7 @@ import { PhimComponent } from '../phim.component';
 })
 export class ItemPhimComponent implements OnInit {
   @Input() phim: PhimComponent;
+
   constructor() { }
   ngOnInit() {
 

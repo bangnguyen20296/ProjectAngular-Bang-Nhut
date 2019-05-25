@@ -20,14 +20,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-<<<<<<< HEAD
   exports: [RouterModule]
-=======
-<<<<<<< HEAD
-  exports: [RouterModule]
-=======
-  exports: [RouterModule, AdminRoutingModule]
->>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
->>>>>>> 6859f721e9cb08348f2a36633a04afd6ac41f5e1
+
 })
 export class AdminRoutingModule { }
