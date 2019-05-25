@@ -11,6 +11,9 @@
 }
 .card-title {
     font-size: 15px;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s;
 }
 .btn {
     visibility: hidden;

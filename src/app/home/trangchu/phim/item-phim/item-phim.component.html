@@ -1,9 +1,9 @@
-<div class="card" style="width: 230px;" (mouseenter)="showBtnChiTiet()" (mouseleave)="hideBtnChiTiet()">
+<div class="card" style="width: 230px;">
   <a data-toggle="modal" data-target="#modelId">
     <!-- data-frame="iframe" -->
     <img class="card-img-top" [src]="phim.HinhAnh" alt="Card image" style="height: 300px;"></a>
   <div class="card-body">
     <h4 class="card-title">{{phim.TenPhim}}</h4>
-    <button class="btn btn-danger w-100">Xem Chi Tiết</button>
+    <button class="btn btn-danger w-100" [routerLink]="['/chi-tiet', phim.MaPhim]">Xem Chi Tiết</button>
   </div>
 </div>

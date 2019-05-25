@@ -8,12 +8,12 @@ import { map} from 'rxjs/operators';
 })
 export class QuanLyNguoiDungService {
 
-  constructor(private http: Http ) { }
+  constructor(private http: Http) { }
   // layDanhSachNguoiDung():Observable<any> {
   //   const obServe = this.http.get(`http://svcy2.myclass.vn/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP01`);
   //   return obServe;
   // }
-  layDanhSachNguoiDung():Observable<any> {
+  layDanhSachNguoiDung(): Observable<any> {
     const url = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP01`;
     const obServe = this.http.get(url).pipe(map((result: Response) => result.json()));
     return obServe;

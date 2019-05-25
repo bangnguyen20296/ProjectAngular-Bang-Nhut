@@ -9,7 +9,6 @@ import { Http , Headers} from '@angular/http';
 })
 export class LayDanhSachPhimService {
 
-
   constructor(private http: HttpClient, private _htpp: Http) { }
 
   public LayDanhSachPhim(): Observable<any> {

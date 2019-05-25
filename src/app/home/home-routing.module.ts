@@ -13,8 +13,8 @@ const routes: Routes = [
       {path: '', component: HomeComponent, children: [
           {path: '', redirectTo: 'trang-chu', pathMatch: 'full'},
           {path: 'trang-chu', component: TrangchuComponent },
-          {path: 'trang-chi-tiet', component: TrangchitietComponent},
-          {path: 'trang-dat-ve', component: TrangdatveComponent},
+          {path: 'chi-tiet/:maphim', component: TrangchitietComponent},
+          {path: 'dat-ve', component: TrangdatveComponent},
           {path: 'tin-tuc', component: TintucComponent},
           {path: 'lien-he', component: LienheComponent},
           {path: 'dang-nhap', component: DangnhapComponent}
