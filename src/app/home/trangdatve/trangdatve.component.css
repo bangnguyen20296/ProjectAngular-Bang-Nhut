@@ -4,3 +4,13 @@
 .main{
     border-left: 76px solid #383838;
 }
+.booking {
+    padding: 3em;
+    border-top: 1px solid #000;
+}
+.booking .head {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}

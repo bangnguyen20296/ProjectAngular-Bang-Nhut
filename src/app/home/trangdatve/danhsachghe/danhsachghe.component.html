@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-6 mx-auto bg-secondary py-4 text-center">
+    <app-ghe *ngFor="let ghe of danhSachGhe" [itemGhe]="ghe" (emitStatus)="datGheParent($event)"></app-ghe>
+  </div>
+</div>
+<div class="noteseat mt-4">
+  <div class="col-md-8 mx-auto">
+    <div class="row">
+      <div class="typeseat">
+        <span class="colornull mr-2"></span><span class="nameseat">Empty seat</span>
+      </div>
+      <div class="typeseat">
+        <span class="colornotchoose mr-2"><img class="notchoose" src="../../../../assets/images/notchoose.png" alt=""></span><span class="nameseat">Seats cannot be selected</span>
+      </div>
+    </div>
+  </div>
+</div>
