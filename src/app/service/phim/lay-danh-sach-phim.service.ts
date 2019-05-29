@@ -12,7 +12,7 @@ export class LayDanhSachPhimService {
   constructor(private http: HttpClient, private _htpp: Http) { }
 
   public LayDanhSachPhim(): Observable<any> {
-    const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP02`);
+    const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP09`);
     return obServe;
   }
 

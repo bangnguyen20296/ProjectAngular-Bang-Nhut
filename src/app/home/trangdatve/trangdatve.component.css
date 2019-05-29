@@ -14,3 +14,8 @@
     margin-bottom: 0px;
     margin-left: 15px;
 }
+.checkout {
+    position: absolute;
+    right: 0;
+    top: 77px;
+}

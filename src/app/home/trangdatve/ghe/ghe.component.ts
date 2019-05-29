@@ -12,8 +12,12 @@ export class GheComponent implements OnInit {
   constructor() { }
 
   datGhe() {
-    this.status = true;
-    this.emitStatus.emit(status);
+    if (this.status) {
+      this.status = false;
+    } else {
+      this.status = true;
+    }
+    this.emitStatus.emit(this.status);
   }
 
   ngOnInit() {

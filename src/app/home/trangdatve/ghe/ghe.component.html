@@ -1,1 +1,6 @@
-<button class="btn btn-light mx-1 my-2" (click)="datGhe()">{{itemGhe.SoGhe}}</button>
+<ng-container *ngIf="!itemGhe.DaDat;else gheDaDuocChon">
+    <button class="btn mx-1 my-2" [ngClass]="{'btn-success': status, 'btn-light': !status}" (click)="datGhe()">{{itemGhe.TenGhe}}</button>
+</ng-container>
+<ng-template #gheDaDuocChon>
+    <button class="btn btn-danger mx-1 my-2" disabled style="cursor: not-allowed">{{itemGhe.TenGhe}}</button>
+</ng-template>

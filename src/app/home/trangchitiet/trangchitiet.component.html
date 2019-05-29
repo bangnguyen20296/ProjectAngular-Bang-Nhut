@@ -36,7 +36,7 @@
               <div class="col-md-9">
                 <div class="row pl-3">
                   <div *ngFor="let lichchieu of ChiTietPhim.LichChieu">
-                    <button class="btn btn-dark mb-2 mr-2" routerLink="/dat-ve">
+                    <button class="btn btn-dark mb-2 mr-2" [routerLink]="['/dat-ve', lichchieu.MaLichChieu]">
                       {{lichchieu.NgayChieuGioChieu | date:'d/M hh:mm'}}
                     </button>
                   </div>

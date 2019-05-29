@@ -14,7 +14,7 @@ const routes: Routes = [
           {path: '', redirectTo: 'trang-chu', pathMatch: 'full'},
           {path: 'trang-chu', component: TrangchuComponent },
           {path: 'chi-tiet/:maphim', component: TrangchitietComponent},
-          {path: 'dat-ve', component: TrangdatveComponent},
+          {path: 'dat-ve/:malichchieu', component: TrangdatveComponent},
           {path: 'tin-tuc', component: TintucComponent},
           {path: 'lien-he', component: LienheComponent},
           {path: 'dang-nhap', component: DangnhapComponent}
