@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Phim } from 'src/app/model/phim';
 import { LayDanhSachPhimService } from 'src/app/service/phim/lay-danh-sach-phim.service';
-=======
->>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
 
 @Component({
   selector: 'app-quan-ly-phim',
@@ -11,7 +8,6 @@ import { LayDanhSachPhimService } from 'src/app/service/phim/lay-danh-sach-phim.
   styleUrls: ['./quan-ly-phim.component.css']
 })
 export class QuanLyPhimComponent implements OnInit {
-<<<<<<< HEAD
   mangPhim: Phim[] = [];
   constructor(private phimSV: LayDanhSachPhimService) { }
 
@@ -41,12 +37,4 @@ export class QuanLyPhimComponent implements OnInit {
         }
       );
   }
-=======
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
->>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
 }
