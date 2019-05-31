@@ -1,8 +1,9 @@
 .full {	
-	border-left: 5px solid #2b2b2b;
+    border-left: 5px solid #2b2b2b;
 }
 .main{
     border-left: 76px solid #383838;
+    height: 100%;
 }
 .booking {
     padding: 3em;
@@ -18,4 +19,13 @@
     position: absolute;
     right: 0;
     top: 77px;
+}
+.checkout button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: none;
+}
+.checkout .card-title span {
+    font-size: 12px;
 }

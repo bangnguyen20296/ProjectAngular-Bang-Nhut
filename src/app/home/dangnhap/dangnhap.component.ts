@@ -28,11 +28,9 @@ export class DangnhapComponent implements OnInit {
     this.loginService.signInUser(nguoiDungDN.TaiKhoan, nguoiDungDN.MatKhau).subscribe((res) => {
       if (typeof (res) === 'object') {
         const objTemp = {
-          TaiKhoan: '',
-          HoTen: ''
+          TaiKhoan: res.TaiKhoan,
+          HoTen: res.HoTen
         };
-        objTemp.TaiKhoan = res.TaiKhoan;
-        objTemp.HoTen = res.HoTen;
         localStorage.setItem('nguoiDungDangNhap', JSON.stringify(objTemp));
         this.router.navigate(['/']);
         console.log(res);

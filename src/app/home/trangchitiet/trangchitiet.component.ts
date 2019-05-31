@@ -18,6 +18,13 @@ export class TrangchitietComponent implements OnInit {
         this.MaPhim = kq.maphim;
         this.phimService.LayChiTietPhim(this.MaPhim).subscribe(
           (chitiet) => {
+            const objTemp = {
+              TenPhim: chitiet.TenPhim,
+              HinhAnh: chitiet.HinhAnh,
+              NgayKhoiChieu: chitiet.NgayKhoiChieu
+            };
+            localStorage.setItem('thongTinPhim', JSON.stringify(objTemp));
+
             let trailer: any = chitiet.Trailer;
             trailer = trailer.split('watch?v=');
             trailer = trailer[0] + 'embed/' + trailer[1];
