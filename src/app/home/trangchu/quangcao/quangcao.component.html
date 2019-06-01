@@ -1,50 +1,21 @@
-<div>Some tags before</div>
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide>
-    <div class="grid">
-      <figure class="effect-goliath">
-        <img src="../../../../assets/images/poster1.jpg" alt="img01" class="img-fluid" />
-        <figcaption>
-          <h2>Nice <span>Lily</span></h2>
-          <p>Lily likes to play with crayons and pencils</p>
-        </figcaption>
-      </figure>
+<div class="container quangcao">
+  <div class="quangcao-heading">
+    <div class="quangcao-heading-left">
+      <h3 class="head">Movie News</h3>
     </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="grid">
-      <figure class="effect-goliath">
-        <img src="../../../../assets/images/poster1.jpg" alt="img01" class="img-fluid" />
-        <figcaption>
-          <h2>Nice <span>Lily</span></h2>
-          <p>Lily likes to play with crayons and pencils</p>
-        </figcaption>
-      </figure>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="grid">
-      <figure class="effect-goliath">
-        <img src="../../../../assets/images/poster1.jpg" alt="img01" class="img-fluid" />
-        <figcaption>
-          <h2>Nice <span>Lily</span></h2>
-          <p>Lily likes to play with crayons and pencils</p>
-        </figcaption>
-      </figure>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="grid">
-      <figure class="effect-goliath">
-        <img src="../../../../assets/images/poster1.jpg" alt="img01" class="img-fluid" />
-        <figcaption>
-          <h2>Nice <span>Lily</span></h2>
-          <p>Lily likes to play with crayons and pencils</p>
-        </figcaption>
-      </figure>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>Slide 2</ng-template>
-  <ng-template carouselSlide>Slide 3</ng-template>
-</owl-carousel-o>
-<div>Some tags after</div>
+  </div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let item of danhSachQuangCao">
+      <div class="grid">
+        <figure class="effect-goliath">
+          <img src="{{item.hinhAnh}}" alt="img01" class="img-fluid" />
+          <a routerLink="/tin-tuc">
+            <figcaption>
+              <p>{{item.noiDung}}</p>
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
