@@ -6,7 +6,8 @@
   </div>
   <div class="phim-content">
     <div class="row">
-      <div class="col-md-3 mb-4" *ngFor="let phim of dsPhim; let i = index">
+      <div class="col-md-3 mb-0" [@anim]=""
+        *ngFor="let phim of dsPhim | paginate: { itemsPerPage: 8, currentPage: p }; let i = index">
         <app-item-phim [phim]="phim" (click)="changeModal(phim.Trailer)"></app-item-phim>
       </div>
       <!-- Modal -->
@@ -28,4 +29,5 @@
       </div>
     </div>
   </div>
+  <pagination-controls class="my-pagination" (pageChange)="p = $event" responsive="true"></pagination-controls>
 </div>

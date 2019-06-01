@@ -26,3 +26,10 @@
     margin: 3.5rem auto;
     max-width: 856px;
 }
+pagination-controls {
+    display: flex;
+    justify-content: center;
+}
+pagination-controls /deep/ ul.ngx-pagination {
+    padding-left: 0;
+}
