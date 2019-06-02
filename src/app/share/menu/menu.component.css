@@ -25,9 +25,6 @@
 .menu ul li a:hover {
 	background: #dfb636;
 }
-.bg-none{
-	background-color: none;
-}
 i.home1, i.news1, i.profile1, i.contact1, i.login1 {
 	display:block;
 }
