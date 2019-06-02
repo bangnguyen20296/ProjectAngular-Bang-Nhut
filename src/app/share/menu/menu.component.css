@@ -28,25 +28,11 @@
 .bg-none{
 	background-color: none;
 }
-i.home1, i.news1, i.booking1, i.contact1, i.login1 {
+i.home1, i.news1, i.profile1, i.contact1, i.login1 {
 	display:block;
 }
-i.home2, i.news2, i.booking2, i.contact2, i.login2 {
+i.home2, i.news2, i.profile2, i.contact2, i.login2 {
 	display: none;
-}
-.menu ul li a:hover div.cover i.home1, .menu ul li a:hover div.cover i.news1, .menu ul li a:hover div.cover i.booking1, .menu ul li a:hover div.cover i.contact1, .menu ul li a:hover div.cover i.login1{
-	display:none;
-}
-.menu ul li a:hover div.cover i.home2, .menu ul li a:hover div.cover i.news2, .menu ul li a:hover div.cover i.booking2, .menu ul li a:hover div.cover i.contact2, .menu ul li a:hover div.cover i.login2{
-	display:block;
-	color: white;
-}
-.menu ul li a.active div.cover i.home1, .menu ul li a.active div.cover i.news1, .menu ul li a.active div.cover i.booking1, .menu ul li a.active div.cover i.contact1, .menu ul li a.active div.cover i.login1{
-	display:none;
-}
-.menu ul li a.active div.cover i.home2, .menu ul li a.active div.cover i.news2, .menu ul li a.active div.cover i.booking2, .menu ul li a.active div.cover i.contact2, .menu ul li a.active div.cover i.login2{
-	display:block;
-	color: white;
 }
 .navbar {
     padding-top: 0px;
