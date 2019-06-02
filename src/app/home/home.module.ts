@@ -17,6 +17,7 @@ import { MenuComponent } from '../share/menu/menu.component';
 import { QuangcaoComponent } from './trangchu/quangcao/quangcao.component';
 import { DanhsachgheComponent } from './trangdatve/danhsachghe/danhsachghe.component';
 import { GheComponent } from './trangdatve/ghe/ghe.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -48,7 +49,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     QuangcaoComponent,
     DanhsachgheComponent,
-    GheComponent
+    GheComponent,
+    ProfileComponent
   ],
 
   exports: [
@@ -68,7 +70,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     QuangcaoComponent,
     DanhsachgheComponent,
-    GheComponent
+    GheComponent,
+    ProfileComponent
   ]
 })
 export class HomeModule { }

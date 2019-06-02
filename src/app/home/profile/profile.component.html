@@ -1,0 +1,29 @@
+<div class="full">
+  <div class="main">
+    <app-header></app-header>
+    <div class="main-profile">
+      <h3 class="head mb-4">GENERAL INFORMATION</h3>
+      <div class="ml-5" *ngIf="status; else requiredLogin">
+        <div class="avatar mb-3">
+          <img src="../../../assets/images/ninja.svg" alt="" width="120px" height="120px">
+        </div>
+        <h6><b>Xin chào {{thongTin.HoTen}},</b></h6>
+        <p class="dirctr">Với trang này, bạn sẽ quản lý được tất cả thông tin tài khoản của mình.</p>
+        <h5 class="title"><b>Thông tin tài khoản</b></h5>
+        <div class="box">
+          <h5>LIÊN HỆ</h5>
+          <a href="#">Thay đổi</a>
+          <button class="btn btn-outline-dark ml-4" (click)="handleSignOut()">Log out</button>
+          <p class="dirctr">Tên : {{thongTin.HoTen}}</p>
+          <p class="dirctr">Email : {{thongTin.Email}}</p>
+          <p class="dirctr">Tên đăng nhập : {{thongTin.TaiKhoan}}</p>
+          <p class="dirctr">Điện thoại : {{thongTin.SoDT}}</p>
+        </div>
+      </div>
+      <ng-template #requiredLogin>
+        <h4 class="ml-5 small thongBao">Please <a routerLink='/dang-nhap'><kbd>log in</kbd></a> to your account to see your information</h4>
+      </ng-template>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

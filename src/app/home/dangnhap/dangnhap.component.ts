@@ -29,7 +29,9 @@ export class DangnhapComponent implements OnInit {
       if (typeof (res) === 'object') {
         const objTemp = {
           TaiKhoan: res.TaiKhoan,
-          HoTen: res.HoTen
+          HoTen: res.HoTen,
+          Email: res.Email,
+          SoDT: res.SoDT
         };
         localStorage.setItem('nguoiDungDangNhap', JSON.stringify(objTemp));
         this.router.navigate(['/']);
