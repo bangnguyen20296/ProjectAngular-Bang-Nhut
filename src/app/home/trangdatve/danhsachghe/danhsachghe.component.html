@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-10 mx-auto bg-secondary py-4 text-center">
+    <app-ghe *ngFor="let ghe of gheArray" [itemGhe]="ghe" (emitStatus)="datGheParent($event, ghe)"></app-ghe>
+  </div>
+</div>
+<div class="noteseat mt-4">
+  <div class="col-md-12 d-flex justify-content-center">
+    <div class="row">
+      <div class="typeseat">
+        <span class="colornull mr-1"></span><span class="nameseat">Empty seat</span>
+      </div>
+      <div class="typeseat">
+        <span class="colornotchoose mr-1"><img class="notchoose" src="../../../../assets/images/notchoose.png"
+            alt=""></span><span class="nameseat">Seats cannot be selected</span>
+      </div>
+
+      <div class="typeseat">
+        <span class="colornull mr-1"></span><span class="nameseat">Number of seats booked: {{soGheDaDat}}</span>
+      </div>
+      <div class="typeseat">
+        <span class="colornull mr-1"></span><span class="nameseat">Number of seats left: {{soGheConLai}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,8 +18,8 @@ export class DangnhapComponent implements OnInit {
   ngOnInit() {
     this.formSignIn = new FormGroup({
 // tslint:disable-next-line: max-line-length
-      'TaiKhoan': new FormControl(null, [Validators.required, Validators.pattern('^[a-z0-9_-]+$'), Validators.maxLength(16), Validators.minLength(8), this.CheckKhongHopLe.bind(this)]),
-      'MatKhau': new FormControl(null, [Validators.required, Validators.maxLength(12), Validators.minLength(6)])
+      TaiKhoan: new FormControl(null, [Validators.required, Validators.pattern('^[a-z0-9_-]+$'), Validators.maxLength(16), Validators.minLength(8), this.CheckKhongHopLe.bind(this)]),
+      MatKhau: new FormControl(null, [Validators.required, Validators.maxLength(12), Validators.minLength(6)])
     });
   }
 
@@ -27,8 +27,15 @@ export class DangnhapComponent implements OnInit {
     const nguoiDungDN = this.formSignIn.value;
     this.loginService.signInUser(nguoiDungDN.TaiKhoan, nguoiDungDN.MatKhau).subscribe((res) => {
       if (typeof (res) === 'object') {
-        localStorage.setItem('nguoiDungDangNhap', JSON.stringify(res.TaiKhoan));
+        const objTemp = {
+          TaiKhoan: res.TaiKhoan,
+          HoTen: res.HoTen,
+          Email: res.Email,
+          SoDT: res.SoDT
+        };
+        localStorage.setItem('nguoiDungDangNhap', JSON.stringify(objTemp));
         this.router.navigate(['/']);
+        console.log(res);
       } else {
         alert('Username or Password is incorrect');
       }
@@ -39,7 +46,7 @@ export class DangnhapComponent implements OnInit {
   CheckKhongHopLe(control: FormControl) {
     for (const taikhoan of this.TaiKhoanKhongHopLe) {
       if (control.value === taikhoan) {
-        return { 'KhongHopLe': true };
+        return { KhongHopLe: true };
       }
     }
     return null;

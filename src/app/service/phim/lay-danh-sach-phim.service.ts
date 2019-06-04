@@ -11,7 +11,7 @@ export class LayDanhSachPhimService {
   mangPhim: Phim[] = [];
   constructor(private http: HttpClient, private _htpp: Http) { }
   public LayDanhSachPhim(): Observable<any> {
-    const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP02`);
+    const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP09`);
     return obServe;
   }
   
@@ -27,8 +27,8 @@ export class LayDanhSachPhimService {
 
   public addMovive(movie: any) {
     const url = `http://svcy2.myclass.vn/api/QuanLyPhim/ThemPhimMoi`;
-    let header = new Headers();
-    header.append('Content-Type','application/json;charset=UTF-8');
+    const header = new Headers();
+    header.append('Content-Type', 'application/json;charset=UTF-8');
     return this._htpp.post(url, movie, {
       headers: header
     });

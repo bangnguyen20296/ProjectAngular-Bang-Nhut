@@ -10,13 +10,14 @@ import { HomeComponent } from './home.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
 import { TrangdatveComponent } from './trangdatve/trangdatve.component';
 import { LienheComponent } from './lienhe/lienhe.component';
-import { HomeRoutingModule } from './home-routing.mudule';
+import { HomeRoutingModule } from './home-routing.module';
 import { HeaderComponent } from '../share/header/header.component';
 import { FooterComponent } from '../share/footer/footer.component';
 import { MenuComponent } from '../share/menu/menu.component';
-import { ThongtinComponent } from './trangchitiet/thongtin/thongtin.component';
-import { DanhgiaComponent } from './trangchitiet/danhgia/danhgia.component';
 import { QuangcaoComponent } from './trangchu/quangcao/quangcao.component';
+import { DanhsachgheComponent } from './trangdatve/danhsachghe/danhsachghe.component';
+import { GheComponent } from './trangdatve/ghe/ghe.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -46,9 +47,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    ThongtinComponent,
-    DanhgiaComponent,
-    QuangcaoComponent
+    QuangcaoComponent,
+    DanhsachgheComponent,
+    GheComponent,
+    ProfileComponent
   ],
 
   exports: [
@@ -66,9 +68,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    ThongtinComponent,
-    DanhgiaComponent,
-    QuangcaoComponent
+    QuangcaoComponent,
+    DanhsachgheComponent,
+    GheComponent,
+    ProfileComponent
   ]
 })
 export class HomeModule { }

@@ -4,4 +4,35 @@
 }
 .card {
     border: 0px;
+    position: relative;
+}
+.card-body {
+    padding: 10px 0 20px 0;
+}
+.card-title {
+    font-size: 15px;
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s;
+}
+.btn {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
+.card-title, .btn {
+    height: 37px;
+}
+.card:hover .card-title {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+.card:hover .btn {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s;
 }

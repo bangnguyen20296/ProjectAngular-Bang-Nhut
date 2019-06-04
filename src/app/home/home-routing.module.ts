@@ -7,16 +7,17 @@ import { TrangdatveComponent } from './trangdatve/trangdatve.component';
 import { TintucComponent } from './tintuc/tintuc.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
-
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
       {path: '', component: HomeComponent, children: [
           {path: '', redirectTo: 'trang-chu', pathMatch: 'full'},
           {path: 'trang-chu', component: TrangchuComponent },
-          {path: 'trang-chi-tiet', component: TrangchitietComponent},
-          {path: 'trang-dat-ve', component: TrangdatveComponent},
+          {path: 'chi-tiet/:maphim', component: TrangchitietComponent},
+          {path: 'dat-ve/:malichchieu', component: TrangdatveComponent},
           {path: 'tin-tuc', component: TintucComponent},
           {path: 'lien-he', component: LienheComponent},
+          {path: 'profile', component: ProfileComponent},
           {path: 'dang-nhap', component: DangnhapComponent}
     ]}
 ];

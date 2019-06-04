@@ -4,5 +4,6 @@
     <img class="card-img-top" [src]="phim.HinhAnh" alt="Card image" style="height: 300px;"></a>
   <div class="card-body">
     <h4 class="card-title">{{phim.TenPhim}}</h4>
+    <button class="btn btn-danger w-100" [routerLink]="['/chi-tiet', phim.MaPhim]">Đặt Vé</button>
   </div>
 </div>

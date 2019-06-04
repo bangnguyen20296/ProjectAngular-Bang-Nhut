@@ -1,0 +1,28 @@
+.typeseat {
+    margin-right: 15px;
+}
+.typeseat .nameseat {
+    color: #9b9b9b;
+    font-size: 14px;
+}
+.typeseat .colornull {
+    height: 10px;
+    width: 10px;
+    background-color: #cecece;
+    display: inline-block;
+}
+.typeseat .colornotchoose {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    background-color: #414246;
+    display: inline-block;
+}
+.typeseat .colornotchoose .notchoose {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 7px;
+    width: 7px;
+}

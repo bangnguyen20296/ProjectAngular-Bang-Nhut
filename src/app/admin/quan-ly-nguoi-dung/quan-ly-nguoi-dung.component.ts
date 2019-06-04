@@ -3,7 +3,6 @@ import { Subscription } from 'rxjs';
 import { NguoiDung } from 'src/app/model/nguoidung';
 import { QuanLyNguoiDungService } from 'src/app/service/nguoidung/quan-ly-nguoi-dung.service';
 
-
 @Component({
   selector: 'app-quan-ly-nguoi-dung',
   templateUrl: './quan-ly-nguoi-dung.component.html',

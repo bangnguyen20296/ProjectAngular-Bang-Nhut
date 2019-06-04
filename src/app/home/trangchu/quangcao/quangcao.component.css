@@ -1,3 +1,26 @@
 p {
     background-color: #df4e4e;
 }
+.grid figure {
+    min-width: 270px;
+    max-height: 390px;
+}
+.quangcao {
+    padding: 2em;
+}
+.quangcao-heading-left {
+    padding: 11px 0;
+}
+.quangcao-heading-left .head {
+    font-size: 2em;
+    font-weight: 700;
+}
+.quangcao-heading {
+    border-bottom: 1px solid #F1F0F6;
+    margin: 0 0 3em 0;
+}
+.quangcao-heading-left h3 {
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+}
