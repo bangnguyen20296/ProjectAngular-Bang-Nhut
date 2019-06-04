@@ -13,25 +13,40 @@
 }
 .logo p {
 	color:#D0D0D0;
-	font-size:1em;
-	letter-spacing:2px;
-	text-transform:uppercase;
+	font-size: 1em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 	float: left;
 	border-left: 1px solid #D0D0D0;
-	padding:4px 0 4px 20px;
-	margin:8px 0 0px 20px;
+	padding: 4px 0 4px 20px;
+	margin: 8px 0 0px 20px;
 }
 .user {
 	float: left;
 	display: block;
 	padding-top: 10px;
 	margin-left: 148px;
+	position: relative;
 }
 .user a {
 	color: #666;
 	font-size: 13px;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+.user .logout {
+	padding: 0px 40px;
+	position: absolute;
+	bottom: -20px;
+	right: 0;
+	height: 20px;
+	font-size: 13px;
+	transform: scale(0);
+	z-index: 1000;
+	transition: all 0.5s;
+}
+.user:hover .logout {
+	transform: scale(1);
 }
 .search{
 	float:right;

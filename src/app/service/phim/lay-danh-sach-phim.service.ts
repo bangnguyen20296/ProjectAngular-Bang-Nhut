@@ -16,7 +16,7 @@ export class LayDanhSachPhimService {
   }
   
  
-  public uploadFile(file: File, TenPhim: string) {
+  public uploadFile(file: File, TenPhim: string): Observable<any> {
     const formData = new FormData();
     formData.append('Files', file);
     formData.append('TenPhim', TenPhim);
@@ -25,7 +25,7 @@ export class LayDanhSachPhimService {
     return obs;
   }
 
-  public addMovive(movie: any) {
+  public addMovive(movie: any): Observable<any> {
     const url = `http://svcy2.myclass.vn/api/QuanLyPhim/ThemPhimMoi`;
     const header = new Headers();
     header.append('Content-Type', 'application/json;charset=UTF-8');

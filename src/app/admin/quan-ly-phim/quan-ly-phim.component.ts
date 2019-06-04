@@ -11,25 +11,25 @@ import { QuanLyPhimService } from 'src/app/service/phim/quan-ly-phim.service';
 })
 export class QuanLyPhimComponent implements OnInit {
   mangPhim: Phim[] = [];
-  tenPhim:string;
-  maPhim:number;
-  trailer:string;
-  moTa:string;
-  maNhom:string;
-  ngayKhoiChieu:any;
-  danhGia:string;
+  tenPhim: string;
+  maPhim: number;
+  trailer: string;
+  moTa: string;
+  maNhom: string;
+  ngayKhoiChieu: any;
+  danhGia: string;
   constructor(private phimSV: LayDanhSachPhimService,
-    private http: HttpClient,
-    private XoaDsService: QuanLyPhimService,
-    private UpdateMovieService: QuanLyPhimService) { }
+              private http: HttpClient,
+              private XoaDsService: QuanLyPhimService,
+              private UpdateMovieService: QuanLyPhimService) { }
 
   ngOnInit() {
     this.phimSV.LayDanhSachPhim().subscribe(
       (kq: any) => {
         this.mangPhim = kq;
-        console.log(this.mangPhim)
+        console.log(this.mangPhim);
       }
-    )
+    );
   }
   handleAddMovie(movie: any, imageFiles: FileList): void {
     movie.MaPhim = '';
@@ -54,36 +54,36 @@ export class QuanLyPhimComponent implements OnInit {
       this.phimSV.LayDanhSachPhim().subscribe(
         (kq: any) => {
           this.mangPhim = kq;
-          console.log(this.mangPhim)
+          console.log(this.mangPhim);
         }
-      )
-    })
-  };
+      );
+    });
+  }
   UpdateMovie(phim: Phim) {
     this.UpdateMovieService.UpdateMovie(phim).subscribe(res => {
       console.log(res);
       this.phimSV.LayDanhSachPhim().subscribe(
         (kq: any) => {
           this.mangPhim = kq;
-          console.log(this.mangPhim)
+          console.log(this.mangPhim);
         }
-      )   
-    },err => {
-      console.log(err)
-    })
+      );
+    }, err => {
+      console.log(err);
+    });
 
   }
-  suaPhim(phim:any){
+  suaPhim(phim: any) {
     console.log(phim);
-    for (let item of this.mangPhim) {
+    for (const item of this.mangPhim) {
       if (item.MaPhim === phim.MaPhim) {
-            this.maPhim=phim.MaPhim,
-            this.tenPhim=phim.TenPhim,
-            this.trailer=phim.Trailer,
-            this.moTa=phim.MoTa,
-            this.maNhom=phim.MaNhom,
-            this.ngayKhoiChieu=phim.NgayKhoiChieu,
-            this.danhGia=phim.DanhGia
+        this.maPhim = phim.MaPhim,
+          this.tenPhim = phim.TenPhim,
+          this.trailer = phim.Trailer,
+          this.moTa = phim.MoTa,
+          this.maNhom = phim.MaNhom,
+          this.ngayKhoiChieu = phim.NgayKhoiChieu,
+          this.danhGia = phim.DanhGia;
       }
     }
     console.log(this.ngayKhoiChieu);
