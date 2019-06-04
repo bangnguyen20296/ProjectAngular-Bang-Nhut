@@ -35,5 +35,4 @@ export class ProfileComponent implements OnInit, DoCheck {
   handleSignOut() {
     localStorage.removeItem('nguoiDungDangNhap');
   }
-
 }

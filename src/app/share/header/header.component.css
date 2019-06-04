@@ -21,7 +21,18 @@
 	padding:4px 0 4px 20px;
 	margin:8px 0 0px 20px;
 }
-
+.user {
+	float: left;
+	display: block;
+	padding-top: 10px;
+	margin-left: 148px;
+}
+.user a {
+	color: #666;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 .search{
 	float:right;
 }

@@ -3,6 +3,9 @@
     <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
     <p>Movie Theater</p>
   </div>
+  <div class="user" *ngIf="status">
+    <a routerLink='/profile'>Hello, {{hoTen}}!</a>
+  </div>
   <div class="search">
     <form>
       <input type="text" value="Search.." onfocus="this.value = '';"
