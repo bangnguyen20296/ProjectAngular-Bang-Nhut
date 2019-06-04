@@ -2,20 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Http , Headers} from '@angular/http';
-
+import { Phim } from 'src/app/model/phim';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LayDanhSachPhimService {
-
+  mangPhim: Phim[] = [];
   constructor(private http: HttpClient, private _htpp: Http) { }
-
   public LayDanhSachPhim(): Observable<any> {
     const obServe = this.http.get(`http://svcy2.myclass.vn/api/quanlyphim/laydanhsachphim?manhom=GP09`);
     return obServe;
   }
-
+  
+ 
   public uploadFile(file: File, TenPhim: string) {
     const formData = new FormData();
     formData.append('Files', file);
@@ -33,4 +33,7 @@ export class LayDanhSachPhimService {
       headers: header
     });
   }
+  
+ 
+
 }

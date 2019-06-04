@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule, AdminRoutingModule, FormsModule, ReactiveFormsModule
   ],
   exports: [
-    QuanLyNguoiDungComponent, QuanLyPhimComponent, DangnhapComponent, ThongKeComponent
+    
   ]
 })
 export class AdminModule { }
