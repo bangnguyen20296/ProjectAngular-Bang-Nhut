@@ -1,37 +1,118 @@
-<<<<<<< HEAD
+<!-- MODAL SỬA -->
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <form #formEditUser="ngForm" (ngSubmit)="UpdateUser(formEditUser.value)">
+          <div class="modal-body">
+            <div class="row m-0">
+              <div class="form-group">
+                <label style="display:none" for="">Tai Khoản: </label>
+                <input style="display:none" type="text" name="TaiKhoan" #taikhoan='ngModel' [(ngModel)]="taiKhoan" ngModel
+                  class="form-control">
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">MK: </label>
+                  <input type="text" name="MatKhau" #matkhau='ngModel' [(ngModel)]="matKhau" ngModel class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Email: </label>
+                  <input type="text" name="Email" #eMail='ngModel' [(ngModel)]="email" ngModel class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+             
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">NumberPhone: </label>
+                  <input type="text" name="SoDT" #sodt='ngModel' [(ngModel)]="soDT" ngModel class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Mã Nhóm: </label>
+                  <input type="text" name="MaNhom" #manhom='ngModel' [(ngModel)]="maNhom" ngModel class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="">Ma Loai Nguoi Dung: </label>
+                  <input type="text" name="MaLoaiNguoiDung" #maloainguoidung='ngModel' [(ngModel)]="maLoaiNguoiDung" ngModel
+                    class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="">Ho và ten: </label>
+              <input type="text" class="form-control" #hoten='ngModel' [(ngModel)]="hoTen" name="HoTen" ngModel>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-warning" type="submit">Cập nhật</button>
+            </div>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Tài khoản</th>
-        <th>Họ Tên</th>
-        <th>Mã nhóm</th>
-        <th>Email</th>
-        <th>Số điện thoại</th>
-        <th>Loại người dùng</th>
-        <th>Thao tác</th>
-        
-      </tr>
-    </thead>
-    <tbody >
-      <tr *ngFor="let dsnd of mangNguoiDung">
-        <td>{{dsnd.TaiKhoan}}</td>
-        <td id="hoten">{{dsnd.HoTen}}</td>
-        <td>{{dsnd.MaNhom}}</td>
-        <td>{{dsnd.Email}}</td>
-        <td>{{dsnd.SoDT}}</td>
-        <td>{{dsnd.MaLoaiNguoiDung}}</td>
-        <td>
-            <button class="btn btn-danger">Sửa</button>
-            <button class="btn btn-primary">Xóa</button>
-          </td>
-      </tr>
-    </tbody>
-  </table>
-  
-=======
-<p>
-  quan-ly-nguoi-dung works!
-</p>
->>>>>>> 06e0a7793db404190c893af0391d606b8c0bff00
+
+
+
+
+
+
+
+
+
+<table class="table table-striped table">
+  <thead>
+    <tr>
+      <th>Tài khoản</th>
+      <th>Họ Tên</th>
+      <th>Mã nhóm</th>
+      <th>Email</th>
+      <th>Số điện thoại</th>
+      <th>Loại người dùng</th>
+      <th>Thao tác</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dsnd of mangNguoiDung">
+      <td>{{dsnd.TaiKhoan}}</td>
+      <td id="hoten">{{dsnd.HoTen}}</td>
+      <td>{{dsnd.MaNhom}}</td>
+      <td>{{dsnd.Email}}</td>
+      <td>{{dsnd.SoDT}}</td>
+      <td>{{dsnd.MaLoaiNguoiDung}}</td>
+      <td>
+        <button (click)="suaND(dsnd)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal2" >Sửa</button>
+        <button (click)="DeleteUser(dsnd.TaiKhoan)" class="btn btn-primary">Xóa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,5 +1,5 @@
 export interface Phim {
-    MaPhim: string;
+    MaPhim: number;
     TenPhim: string;
     Trailer: string;
     HinhAnh: string;
