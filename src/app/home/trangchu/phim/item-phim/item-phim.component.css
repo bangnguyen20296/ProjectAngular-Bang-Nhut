@@ -36,3 +36,30 @@
     opacity: 1;
     transition: all .3s;
 }
+.hoverInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 300px;
+    background: linear-gradient(to top,#000,transparent 100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+.card:hover .hoverInfo {
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s;
+}
+.hoverInfo a {
+    margin: 50% auto;
+    cursor: pointer;
+}
+.hoverInfo a img {
+    width: 45px;
+    height: 45px;
+}
+.hoverInfo a:hover {
+    opacity: .7;
+}

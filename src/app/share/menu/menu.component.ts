@@ -12,9 +12,10 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('[data-toggle="tooltip"]').tooltip({
-        animated: 'fade'
+        animated: 'fade',
+        trigger: 'hover'
       });
       $('[data-toggle="tooltip"]').hover(function () {
         $('.tooltip-inner').css('min-width', '50px');
